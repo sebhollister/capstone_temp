@@ -21,7 +21,6 @@ def main():
     fileName= "img_" + datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + ".jpg"
     cmd = "raspistill --ISO {} --contrast {} -- brightness {} --drc high -k --saturation {} --shutter {} -o ".format(
         iso, cont, brt, sat, shutter) + dir + fileName
-    print(cmd)
     subprocess.call(cmd, shell=True) 
 
     #Print model data
